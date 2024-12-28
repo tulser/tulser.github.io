@@ -1,0 +1,31 @@
+@import url("fonts.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --media-portrait-width-thresh: 360px;
+    --media-landscap-width-thresh: 1000px;
+
+    --main-content-min-width: 32rem;
+    --main-content-nom-width: 70%;
+    --main-content-max-width: 100rem;
+
+    --main-background-color-primary: rgb(58, 56, 54);
+    --main-background-color-secondary: rgb(187, 159, 128);
+    --main-background-color-dark: rgb(34, 34, 32);
+
+    --header-background-color: rgb(30, 29, 27);
+
+    --common-border-color: rgb(30, 30, 30);
+
+    --link-color: rgb(96, 187, 96);
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+    margin: 0;
+}

@@ -1,0 +1,42 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:
+        linear-gradient(to top, var(--main-background-color-dark) 0px, rgb(0,0,0,0) 250px),
+        var(--main-background-color-primary);
+
+    p, h1, h2, h3, h4, h5, h6, a {
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Nimbus Sans", sans-serif;
+        font-weight: bold;
+    }
+
+    a {
+        color: var(--link-color);
+    }
+}
+
+.main_content {
+    background: hsl(from var(--main-background-color-primary) h s calc(l - 2) / 0.5);
+    width: var(--main-content-nom-width);
+    max-width: var(--main-content-max-width);
+    margin: 0 auto;
+    padding: 2rem 1% 4rem 1%;
+    flex-grow: 1;
+}
+
+.section {
+    margin-top: 1rem;
+}
+
+.alt_font {
+    font-family: "Liberation Sans", sans-serif;
+}

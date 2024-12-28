@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Nimbus Sans";
+    font-style: normal;
+    font-weight: normal;
+    src:
+        local("Nimbus Sans"),
+        local("NimbusSans-Regular"),
+        url("/static/fonts/NimbusSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nimbus Sans";
+    font-style: italic;
+    font-weight: normal;
+    src:
+        local("Nimbus Sans Italic"),
+        local("NimbusSans-Italic"),
+        url("/static/fonts/NimbusSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nimbus Sans";
+    font-style: normal;
+    font-weight: bold;
+    src:
+        local("Nimbus Sans Bold"),
+        local("NimbusSans-Bold"),
+        url("/static/fonts/NimbusSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Nimbus Sans";
+    font-style: italic;
+    font-weight: bold;
+    src:
+        local("Nimbus Sans Bold Italic"),
+        local("NimbusSans-BoldItalic"),
+        url("/static/fonts/NimbusSans-BoldItalic.ttf") format("truetype");
+}
