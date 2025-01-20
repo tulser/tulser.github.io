@@ -18,7 +18,6 @@ export function Header() {
                 </div>
                 <div className={style.navbar_right}>
                     <div className={style.main_links}>
-                        <a href="/bio">Bio</a>
                         <a href="/blog">Blog</a>
                     </div>
                 </div>

@@ -8,6 +8,8 @@ import { classes } from "@/helpers";
 import { StandardLayout } from "@/components/layouts";
 import { LinkButton, BioLinkInfo } from "@/components/partials";
 
+import Bio from "@/res/bio.md";
+
 import { biolinks } from "@/links";
 import portrait from "public/static/images/portrait.png";
 
@@ -29,7 +31,7 @@ export default function Page() {
     return (
         <StandardLayout>
             <article className={classes([style.main_content, cstyle.main_content, cstyle.led_font])}>
-                <section className={style.sec_profile}>
+                <section id="profile" className={style.sec_profile}>
                     <div className={classes([style.profile_ctr, "flex flex-col"])}>
                         <div className={style.portrait}>
                             <Image src={portrait} fill={true} alt="Avatar" priority={true}/>
@@ -40,8 +42,17 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
-                <section className={style.sec_bio_blurb}>
-                    <div className={style.bio_ctr}>
+                <section id="bio" className={classes([style.sec_bio, "flex", "flex-row"])}>
+                    <div className={classes([style.left_ss, "grow"])}>
+                        <Bio />
+                    </div>
+                    <div className={classes([style.right_ss, "flex-none"])}>
+                        <div className={classes([style.portrait_ctr])}>
+                        </div>
+                        <div className={classes([style.caption])}>
+                            <h1>{ info.bio_name_full }</h1>
+                            <h2>{ info.bio_title }</h2>
+                        </div>
                     </div>
                 </section>
             </article>
