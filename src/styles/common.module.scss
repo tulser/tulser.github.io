@@ -11,7 +11,6 @@
 
     p, h1, h2, h3, h4, h5, h6 {
         color: #fff;
-        margin: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -33,10 +32,12 @@
     flex-grow: 1;
 }
 
-.section {
-    margin-top: 1rem;
-}
-
 .alt_font {
     font-family: "Liberation Sans", sans-serif;
+}
+
+.markdown_base {
+    p, hr {
+        margin-bottom: 1rem;
+    }
 }

@@ -34,24 +34,24 @@ export default function Page() {
                 <section id="profile" className={style.sec_profile}>
                     <div className={classes([style.profile_ctr, "flex flex-col"])}>
                         <div className={style.portrait}>
-                            <Image src={portrait} fill={true} alt="Avatar" priority={true}/>
+                            <Image src={portrait} fill={true} alt="Photo" priority={true}/>
                         </div>
                         <div className={style.portrait_below}>
-                            <h1>{info.bio_name_full}</h1>
-                            {BioLinkBoard(biolinks)}
+                            <span className="w-full text-center block">
+                                <a href="mailto:self@wcyates.xyz" target="_blank">self@wcyates.xyz</a>    
+                            </span>
+                            <h1 className="w-full text-center">{ info.bio_name_full }</h1>
+                            <p className="w-full text-center mb-4">{ info.bio_title }</p>
+                            { BioLinkBoard(biolinks) }
                         </div>
                     </div>
                 </section>
                 <section id="bio" className={classes([style.sec_bio, "flex", "flex-row"])}>
                     <div className={classes([style.left_ss, "grow"])}>
-                        <Bio />
+                        <div className={classes([cstyle.markdown_base])}><Bio /></div>
                     </div>
                     <div className={classes([style.right_ss, "flex-none"])}>
                         <div className={classes([style.portrait_ctr])}>
-                        </div>
-                        <div className={classes([style.caption])}>
-                            <h1>{ info.bio_name_full }</h1>
-                            <h2>{ info.bio_title }</h2>
                         </div>
                     </div>
                 </section>

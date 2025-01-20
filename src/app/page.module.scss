@@ -1,7 +1,7 @@
 .sec_profile {
-    .profile_ctr {
-        margin: 5rem 0 8rem 0;
+    margin: 2rem 0 0 0;
 
+    .profile_ctr {
         .portrait {
             margin: 0 auto 2rem auto;
             position: relative;
@@ -19,30 +19,28 @@
             h1 {
                 font-size: 2rem;
                 letter-spacing: 0.05rem;
-                text-justify: center;
-                margin-bottom: 0.5rem;
+            }
+            p {
+                width: 100%;
+                font-size: 1.25rem;
             }
         }
     }
 }
 
-.bio {
-    margin-top: 2rem;
-
-    .portal_ctr {
-    }
-}
-
 .sec_bio {
+    margin: 5rem 0 0 0;
+
     .left_ss {
-        padding: 50px 10% 0 0;
+        padding: 0 10% 0 5%;
         // TODO: Move to mdx-components.tsx
         p, h1, h2, h3, h4, h5, h6 {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 
     .right_ss {
+        margin-right: 2rem;
         .portrait_ctr {
             width: 16vw;
             // TODO: These should be properties of the underlying image.
@@ -52,13 +50,6 @@
             margin: 0 auto 0 auto;
             background: rgb(60, 60, 60);
             border: 2px solid var(--common-border-color);
-        }
-        .caption {
-            margin-top: 15px;
-            padding-left: 16px;
-        }
-        h1 {
-            font-size: 32px;
         }
     }
 }
