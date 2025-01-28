@@ -1,7 +1,11 @@
 .sec_profile {
-    margin: 2rem 0 0 0;
+    background-color: var(--ctr-background-color);
+    margin: 0 0 0 0;
 
     .profile_ctr {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
         .portrait {
             margin: 0 auto 2rem auto;
             position: relative;
@@ -33,10 +37,6 @@
 
     .left_ss {
         padding: 0 10% 0 5%;
-        // TODO: Move to mdx-components.tsx
-        p, h1, h2, h3, h4, h5, h6 {
-            font-size: 1rem;
-        }
     }
 
     .right_ss {

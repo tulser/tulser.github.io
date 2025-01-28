@@ -21,6 +21,8 @@
     --common-border-color: rgb(30, 30, 30);
 
     --link-color: rgb(96, 187, 96);
+
+    --ctr-background-color: rgb(47, 43, 38, 1);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -6,9 +6,6 @@
         linear-gradient(to top, var(--main-background-color-dark) 0px, rgb(0,0,0,0) 250px),
         var(--main-background-color-primary);
 
-    p, h1, h2, h3, h4, h5, h6, a {
-    }
-
     p, h1, h2, h3, h4, h5, h6 {
         color: #fff;
     }
@@ -28,7 +25,6 @@
     width: var(--main-content-nom-width);
     max-width: var(--main-content-max-width);
     margin: 0 auto;
-    padding: 2rem 1% 4rem 1%;
     flex-grow: 1;
 }
 
@@ -39,5 +35,14 @@
 .markdown_base {
     p, hr {
         margin-bottom: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h1, h2 {
+        margin-bottom: 0.5rem;
     }
 }

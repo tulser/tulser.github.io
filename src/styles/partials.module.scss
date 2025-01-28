@@ -56,3 +56,10 @@
     width: 2rem;
     height: 2rem;
 }
+
+.ctr_common {
+    background-color: var(--ctr-background-color);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--common-border-color);
+}

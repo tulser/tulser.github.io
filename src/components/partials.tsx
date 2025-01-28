@@ -7,6 +7,7 @@ import { header } from "@/env";
 import { classes } from "@/helpers";
 
 
+// For layout creation
 export function Header() {
     return (
         <header className={classes([style.header])}>
@@ -18,6 +19,7 @@ export function Header() {
                 </div>
                 <div className={style.navbar_right}>
                     <div className={style.main_links}>
+                        <a href="/projects">Projects</a>
                         <a href="/blog">Blog</a>
                     </div>
                 </div>
@@ -36,6 +38,7 @@ export function Footer() {
 }
 
 
+// For `/`
 export interface BioLinkInfo {
     target_title: string;
     target_url: string;
@@ -47,6 +50,25 @@ export function LinkButton(args: BioLinkInfo) {
         <div className={style.lb_img_ctr}>
             <a href={args.target_url}>
                 <Image src={args.image_src} fill={true} alt={args.target_title} />
+            </a>
+        </div>
+    );
+}
+
+
+// For `/projects`
+export interface ProjectInfoBoxArgs {
+    title: string;
+    description: string;
+    target_url?: string;
+}
+
+export function ProjectInfoBox(args: ProjectInfoBoxArgs) {
+    return (
+        <div className={classes([style.ctr_common, "grow"])}>
+            <a className="block px-8 py-5" href={args.target_url}>
+                <h2 className="mb-3 text-lg">{args.title}</h2>
+                <p>{args.description}</p>
             </a>
         </div>
     );
