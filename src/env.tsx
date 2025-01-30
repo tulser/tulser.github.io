@@ -6,6 +6,7 @@ export const info = {
 
 export const meta = {
     title: info.bio_name_trunc,
+    description: "Homepage for ".concat(info.bio_name_trunc),
 };
 
 export const header = {
