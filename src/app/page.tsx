@@ -17,7 +17,7 @@ import portrait from "public/static/images/portrait.png";
 function BioLinkBoard(args: BioLinkInfo[]) {
     var key_iter = 0;
     return (
-        <div className="flex flex-row justify-center">
+        <div className={classes(["flex flex-row justify-center", style.link_board])}>
             {args.map((link) => {
                 const ret = (<LinkButton key={key_iter} target_title={link.target_title} target_url={link.target_url} image_src={link.image_src} />)
                 key_iter += 1;

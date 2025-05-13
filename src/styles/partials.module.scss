@@ -52,9 +52,14 @@
 }
 
 .lb_img_ctr {
+    margin-left: 1rem;
     position: relative;
     width: 2rem;
     height: 2rem;
+}
+
+.lb_img_ctr:first-child {
+    margin-left: 0;
 }
 
 .ctr_common {
