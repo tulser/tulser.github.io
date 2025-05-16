@@ -14,7 +14,7 @@
             aspect-ratio: 1;
             min-width: 3rem;
             overflow: hidden;
-            border: 2px solid var(--common-border-color);
+            border: 0.15rem solid var(--common-border-color);
         }
 
         .portrait_below {
@@ -36,20 +36,25 @@
     margin: 5rem 0 0 0;
 
     .left_ss {
-        padding: 0 10% 0 5%;
+        margin-left: 2rem;
+        padding: 0 2% 0 2%;
+        min-width: 14rem;
     }
 
     .right_ss {
         margin-right: 2rem;
-        .portrait_ctr {
-            width: 16vw;
-            // TODO: These should be properties of the underlying image.
-            min-width: 200px;
-            aspect-ratio: 0.7;
+        padding: 0 2% 0 2%;
+
+        .right_lotusimg_ctr {
+            position: relative;
+            width: 100%;
+            height: auto;
+            min-width: 100px;
+            max-width: 450px;
 
             margin: 0 auto 0 auto;
             background: rgb(60, 60, 60);
-            border: 2px solid var(--common-border-color);
+            border: 0.15rem solid var(--common-border-color);
         }
     }
 }

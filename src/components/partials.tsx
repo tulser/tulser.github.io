@@ -30,8 +30,8 @@ export function Header() {
 
 export function Footer() {
     return (
-        <div className="prefooter">
-            <footer className="footer">
+        <div className={style.footer_ctr}>
+            <footer className={style.footer}>
             </footer>
         </div>
     );

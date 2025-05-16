@@ -64,7 +64,11 @@
 
 .ctr_common {
     background-color: var(--ctr-background-color);
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--common-border-color);
+    border: solid 0.2rem var(--common-border-color);
+}
+
+.footer_ctr {
+    .footer {
+        height: 8rem;
+    }
 }

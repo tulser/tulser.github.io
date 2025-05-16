@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 import { classes } from "@/helpers";
 
-import { Header } from "./partials"
+import { Header, Footer } from "./partials"
 
 
 export function StandardLayout(args: {
@@ -12,8 +12,9 @@ export function StandardLayout(args: {
 }) {
     return (
         <main className={classes([cstyle.main])}>
-            <Header></Header>
+            <Header/>
             {args.children}
+            <Footer/>
         </main>
     );
 }
