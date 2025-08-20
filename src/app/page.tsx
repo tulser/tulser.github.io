@@ -1,21 +1,21 @@
 import cstyle from "@/styles/common.module.scss";
 import style from "./page.module.scss";
 
+import { ReactNode } from "react";
 import Image from "next/image";
 
-import { info } from "@/env";
+import { info, links } from "@/meta";
 import { classes } from "@/helpers";
 import { StandardLayout } from "@/components/layouts";
 import { LinkButton, BioLinkInfo } from "@/components/partials";
 
-import Bio from "@/res/bio.md";
+import Bio from "markdown/bio.md";
 
-import { biolinks } from "@/links";
-import portrait from "public/static/images/portrait.png";
+import portrait from "public/static/images/portrait.webp";
 import lotus from "public/static/images/lotus.webp";
 
 
-function BioLinkBoard(args: BioLinkInfo[]) {
+function BioLinkBoard(args: BioLinkInfo[]): ReactNode {
     var key_iter = 0;
     return (
         <div className={classes(["flex flex-row justify-center", style.link_board])}>
@@ -39,11 +39,11 @@ export default function Page() {
                         </div>
                         <div className={style.portrait_below}>
                             <span className="w-full text-center block">
-                                <a href="mailto:self@wcyates.xyz" target="_blank">self@wcyates.xyz</a>    
+                                <a href={`mailto:${info.bio_email}`} target="_blank">{ info.bio_email }</a>    
                             </span>
                             <h1 className="w-full text-center">{ info.bio_name_full }</h1>
                             <p className="w-full text-center mb-4">{ info.bio_title }</p>
-                            { BioLinkBoard(biolinks) }
+                            { BioLinkBoard(links) }
                         </div>
                     </div>
                 </section>

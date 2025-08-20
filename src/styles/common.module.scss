@@ -46,3 +46,8 @@
         margin-bottom: 0.5rem;
     }
 }
+
+.ctr_common {
+    background-color: var(--ctr-background-color);
+    border: solid 0.2rem var(--common-border-color);
+}

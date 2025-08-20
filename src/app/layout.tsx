@@ -3,11 +3,11 @@ import style from "./layout.module.scss";
 
 import type { Metadata } from "next";
 
-import { meta } from "@/env";
+import { pagemeta } from "@/meta";
 
 export const metadata: Metadata = {
-    title: meta.title,
-    description: meta.description,
+    title: pagemeta.title,
+    description: pagemeta.description,
 };
 
 export default function RootLayout(arg: {

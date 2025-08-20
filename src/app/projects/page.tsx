@@ -1,41 +1,37 @@
 import cstyle from "@/styles/common.module.scss";
 import style from "./page.module.scss";
 
+import { ReactNode } from "react";
+
 import { classes } from "@/helpers";
 import { StandardLayout } from "@/components/layouts";
-import { ProjectInfoBox, ProjectInfoBoxArgs } from "@/components/partials";
 
+import { projects } from "@/meta";
 
-let projects: ProjectInfoBoxArgs[] = [
-    {
-        title: "RANIA Fall Detection System (rania-fds)",
-        description: `\
-            rania-fds was a capstone project designed in Fall 2023 and developed \
-            in Spring 2024 by myself and two other peers. Despite having a fairly \
-            comprehensive vision and design, it was largely unfinished due to \
-            overestimation of our team's capabilities, particularly in writing \
-            the software. We had aimed to use 2d/planar LIDAR for detecting \
-            outlines of persons when they were on the floor and then using a kNN \
-            trained on (transformed) outlines to make a determination of the fall \
-            state.\
-            `,
-        target_url: "https://github.com/tulser/rania-fds",
-    },
-];
+export interface ProjectInfo {
+    title: string;
+    short_description: string;
+    md_description?: ReactNode;
+    target_url?: string;
+}
 
 // TODO: Try using `flex-wrap` with single div container for multiple entries. 
-function ProjectInfoBoxCtr(args: ProjectInfoBoxArgs[]) {
+function ProjectInfoBoxCtr(args: ProjectInfo[]): ReactNode {
     var boxrow_key_iter = 0;
     var boxrow_ctr_key_iter = 0;
     var boxes: JSX.Element[] = [];
     while (boxrow_key_iter != args.length) {
         let row_maxitems = 2;
         let boxrow = args.slice(boxrow_key_iter, boxrow_key_iter + row_maxitems).map((entry, ix) => {
-            const ret = (<ProjectInfoBox key={boxrow_key_iter}
-                    title={entry.title}
-                    description={entry.description}
-                    target_url={entry.target_url}
-                />);
+            const ret = (
+                <div key={boxrow_key_iter} className={classes([cstyle.ctr_common, "grow px-8 py-5"])}>
+                    <h2 className="mb-1 text-lg"><a href={entry.target_url}>{entry.title}</a></h2>
+                    <p className="mb-4 font-bold italic">{entry.short_description}</p>
+                    <div className={classes([cstyle.markdown_base])}>
+                        { entry.md_description }
+                    </div>
+                </div>
+            );
             boxrow_key_iter += 1;
             return ret;
         });

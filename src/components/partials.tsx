@@ -3,7 +3,7 @@ import style from "@/styles/partials.module.scss";
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
-import { header } from "@/env";
+import { header } from "@/meta";
 import { classes } from "@/helpers";
 
 
@@ -14,13 +14,13 @@ export function Header() {
             <nav className={style.navbar}>
                 <div className={style.navbar_left}>
                     <div className={style.title}>
-                        <a href="/">{header.title}</a>
+                        <a href="/">{ header.title }</a>
                     </div>
                 </div>
                 <div className={style.navbar_right}>
                     <div className={style.main_links}>
                         <a href="/projects">Projects</a>
-                        <a href="/blog">Blog</a>
+                        {/*<a href="/blog">Blog</a>*/}
                     </div>
                 </div>
             </nav>
@@ -55,21 +55,3 @@ export function LinkButton(args: BioLinkInfo) {
     );
 }
 
-
-// For `/projects`
-export interface ProjectInfoBoxArgs {
-    title: string;
-    description: string;
-    target_url?: string;
-}
-
-export function ProjectInfoBox(args: ProjectInfoBoxArgs) {
-    return (
-        <div className={classes([style.ctr_common, "grow"])}>
-            <a className="block px-8 py-5" href={args.target_url}>
-                <h2 className="mb-3 text-lg">{args.title}</h2>
-                <p>{args.description}</p>
-            </a>
-        </div>
-    );
-}
