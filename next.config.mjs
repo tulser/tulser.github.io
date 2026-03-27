@@ -1,6 +1,6 @@
 import { join, dirname } from "path";
 
-import createMDX from '@next/mdx'
+import createMDX from '@next/mdx';
 
 const __dirname = dirname(import.meta.filename);
 
@@ -8,8 +8,11 @@ const __dirname = dirname(import.meta.filename);
 const nextConfig = {
     pageExtensions: ['ts', 'tsx'],
     reactStrictMode: true,
-    experimental: {
-        typedRoutes: true,
+    typedRoutes: true,
+    turbopack: {
+        resolveAlias: {
+            "next-mdx-import-source-file": "./mdx-components.ts",
+        },
     },
     sassOptions: {
         loadPaths: [

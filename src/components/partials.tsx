@@ -20,6 +20,7 @@ export function Header() {
                 <div className={style.navbar_right}>
                     <div className={style.main_links}>
                         <a href="/projects">Projects</a>
+                        <a href="/static/resume.pdf">Resume</a>
                         {/*<a href="/blog">Blog</a>*/}
                     </div>
                 </div>
@@ -48,8 +49,13 @@ export interface BioLinkInfo {
 export function LinkButton(args: BioLinkInfo) {
     return (
         <div className={style.lb_img_ctr}>
-            <a href={args.target_url}>
-                <Image src={args.image_src} fill={true} alt={args.target_title} />
+            <a href={args.target_url} className="inline-block w-8 h-8 absolute">
+                <Image
+                    src={args.image_src}
+                    fill={true}
+                    alt={args.target_title}
+                    unoptimized={true}
+                />
             </a>
         </div>
     );

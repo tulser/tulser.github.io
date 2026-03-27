@@ -35,7 +35,13 @@ export default function Page() {
                 <section id="profile" className={style.sec_profile}>
                     <div className={classes([style.profile_ctr, "flex flex-col"])}>
                         <div className={style.portrait}>
-                            <Image src={portrait} fill={true} alt="Personal headshot" priority={true}/>
+                            <Image
+                                src={portrait}
+                                fill={true}
+                                alt="Head of W. Connor Yates"
+                                preload={true}
+                                sizes="(max-width: 768px) 100vw"
+                            />
                         </div>
                         <div className={style.portrait_below}>
                             <span className="w-full text-center block">
