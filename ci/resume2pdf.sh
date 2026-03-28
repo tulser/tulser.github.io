@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-# Assumes `apt` is in path and that `/var/tmp` is writeable
-
-pkgs_req="texlive-latex-base texlive-latex-extra"
-sudo apt-get update && sudo apt-get install -y ${pkgs_req}
+# Assumes the execution environment is a Debian-like system, i.e:
+# `apt` is in path and that `/var/tmp` is writeable.
+# Also assumes Debian/Ubuntu packages `texlive-latex-base texlive-latex-extra`
+# are installed.
 
 # Generate the resume
 resume_fname_head="resume"
