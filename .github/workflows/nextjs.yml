@@ -28,7 +28,8 @@ jobs:
           lfs: true
 
       - name: Cache APT Packages
-        # TODO: Remove this once
+        # TODO: Remove this once [https://github.com/awalsh128/cache-apt-pkgs-action/pull/192] is merged.
+        # `awalsh128/cache-apt-pkgs-action@v1` does not support `execute_install_scripts`.
         uses: robtaylor/cache-apt-pkgs-action@f61e6b0c95c09cf79d50a3a7915d485ed805f785
         #uses: awalsh128/cache-apt-pkgs-action@v1
         with:
@@ -64,7 +65,7 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       - name: Setup Pages
-        # TODO: Remove this once [https://github.com/actions/configure-pages/issues/44] is merged.
+        # TODO: Remove this once [https://github.com/actions/configure-pages/issues/44] is fixed.
         # Use PR repo [https://github.com/actions/configure-pages/pull/161] until patch is merged
         # due to wrapping support not passed in the stock action.
         uses: sainsburys-tech/configure-pages@ba7d7057854f4120c841ec77167c99fb5ac74106

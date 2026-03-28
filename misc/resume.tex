@@ -98,6 +98,13 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeCertificationsHeading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \href{#2}{\underline{\textbf{\small#1}}} & Valid #3 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -140,28 +147,53 @@
       \resumeProjectHeading
           {\textbf{Capstone - RANIA Fall Detection System} $|$ \emph{Python, ZeroMQ, Numpy, Scikit}}{August 2023 -- May 2024}
           \resumeItemListStart
-            \resumeItem{Developed a fall detection system prototype in Python to interface with a central hub via ZeroMQ}
+            \resumeItem{Developed a fall detection system prototype in Python to interface with a central hub}
             \resumeItem{Implemented multi-threaded system using loops to pull scans from a LiDAR sensor and classify scans}
-            \resumeItem{Created detection pipelines using DBSCAN clustering and k Nearest Neighbors from Scikit-learn}
-            \resumeItem{Used Matplotlib to emit LiDAR scan plots and other processed information}
+            \resumeItem{Created detection pipelines using DBSCAN clustering and k Nearest Neighbors}
+            \resumeItem{Used plotting/matplotlib to emit LiDAR scan plots and other processed information}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
-%-----------PROGRAMMING SKILLS-----------
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C, C++, Zig, POSIX Shell, Rust, Java, Javascript, Typescript} \\
-     \textbf{Tools and Software}{: Git, GDB, Neovim, VS Code, Node.js, Meson/Ninja, CMake} \\
-     \textbf{Libraries and Frameworks}{: NumPy, Matplotlib, Scikit-learn, Next.js, glib, GTK} \\
+     \textbf{Languages}{: Python, C, C++, Zig, POSIX Shell, Java, Javascript, Typescript, CSS} \\
+     \textbf{Tools and Software}{: Git, GDB, Node.js, FFMPEG, GNU Make, Podman, Meson/Ninja, CMake} \\
+     \textbf{Libraries and Frameworks}{: NumPy, Matplotlib, Scikit-learn, Next.js, spandrel, glib, GTK} \\
      \textbf{Systems}{: Linux $($Debian-like, Arch-like$)$, Windows}
     }}
  \end{itemize}
 
+%------------CERTIFICATIONS------------
+\section{Employment}
+    \resumeSubHeadingListStart
+      \resumeCertificationsHeading
+          {CompTIA Security+}{https://www.credly.com/badges/b1780bab-be84-424d-93fc-add1db80c42c}{July 2025 -- July 2028}
+      \resumeCertificationsHeading
+          {CompTIA Network+}{https://www.credly.com/badges/948ff074-63c5-490a-9517-bb8d9d89b983}{May 2019 -- May 2022}
+      \resumeCertificationsHeading
+          {Microsoft Office Specialist: Master 2013}{https://www.credly.com/badges/94223946-5124-49c0-bbb8-59648259a075}{June 2017}
+    \resumeSubHeadingListEnd
+
 %------------EMPLOYMENT-------------
 \section{Employment}
     \resumeSubHeadingListStart
+      \resumeEmploymentHeading
+          {Contract Video Producer}{Ascent Conference 2026 @ Columbia Baptist Church}{10--12 March 2026}
+          \resumeItemListStart
+            \resumeItem{Controlled video production for the Ascent Conference held at Columbia Baptist Church}
+            \resumeItem{Directed camera operators and static shot placement during conference presentations -- including during speech and music segments}
+            \resumeItem{Switched and managed camera feeds for broadcast and front--of--house streams}
+          \resumeItemListEnd
+      \resumeEmploymentHeading
+          {Event Staff}{Arlington Public Schools - Wakefield High School}{August 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Handled the sale of tickets and controlled the admission of spectators and event participants into the stadium}
+            \resumeItem{Handled the setup and cleanup of athletic events}
+            \resumeItem{Did introductory and commentary announcements for Girl's Varsity matches}
+          \resumeItemListEnd
       \resumeEmploymentHeading
           {Lead Counselor}{Columbia Baptist Church}{August 2023 -- May 2024}
           \resumeItemListStart
@@ -171,5 +203,18 @@
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-%-------------------------------------------
+%------------VOLUNTEERING------------
+\section{Volunteering}
+    \resumeSubHeadingListStart
+      \resumeEmploymentHeading
+          {Audio/Video Volunteer}{Columbia Baptist Church}{October 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Assisted with video production for services and special events held at Columbia Baptist Church}
+            \resumeItem{Directed camera operators and managed camera feeds for broadcast and front--of--house streams as video producer}
+            \resumeItem{Controlled shots with manual and robotic (PTZ) cameras at the direction of video producer as camera operator}
+            \resumeItem{Met with team members to help improve processes and document video equipment}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%--------------------------------------
 \end{document}
