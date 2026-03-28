@@ -9,7 +9,7 @@ import { classes } from "@/helpers";
 import { StandardLayout } from "@/components/layouts";
 import { LinkButton, BioLinkInfo } from "@/components/partials";
 
-import Bio from "markdown/bio.md";
+import Bio from "./bio.mdx";
 
 import portrait from "public/static/images/portrait.webp";
 import lotus from "public/static/images/lotus.webp";
@@ -53,15 +53,8 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
-                <section id="bio" className={classes([style.sec_bio, "flex", "flex-row"])}>
-                    <div className={classes([style.left_ss, "grow basis-[80%]"])}>
-                        <div className={classes([cstyle.markdown_base])}><Bio /></div>
-                    </div>
-                    <div className={classes([style.right_ss])}>
-                        <div className={classes([style.right_lotusimg_ctr])}>
-                            <Image src={lotus} fill={false} alt="Picture of lotuses" priority={true} style={{objectFit:"contain"}}/>
-                        </div>
-                    </div>
+                <section id="bio" className={classes([style.sec_bio])}>
+                    <div className={classes([cstyle.markdown_base])}><Bio /></div>
                 </section>
             </article>
         </StandardLayout>

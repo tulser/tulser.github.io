@@ -66,7 +66,7 @@ export const links: BioLinkInfo[] = [
 // Projects (`/projects`)
 import { ProjectInfo } from "@/app/projects/page";
 
-import Rania from "markdown/rania.md";
+import Rania from "@/app/projects/rania.md";
 
 
 export const projects: ProjectInfo[] = [

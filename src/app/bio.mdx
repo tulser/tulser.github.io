@@ -1,13 +1,41 @@
+import style from "./page.module.scss";
+
+import Image from "next/image";
+import { classes } from "@/helpers";
+
+import mandelbulb from "public/static/images/mandelbulb.webp";
+import lotus from "public/static/images/lotus.webp";
+
+
+<div className={classes([style.img_ctr, style.img_ctr_fl, "min-w-[100px] max-w-[300px] w-[20%]"])}>
+    <Image
+        src={mandelbulb}
+        fill={false}
+        alt="Picture of a unique mandelbulb configuration"
+        style={{objectFit:"contain"}}
+    />
+</div>
+
 I'm an aspiring software and IT engineer with additional passions for media & graphics, real-time systems, and other fields which supplement my hobbies. I'm also very fond of Linux, particularly Debian-based systems, of which I use greatly. Within the domain of Linux, I also enjoy contributing to desktop applications and the desktop experience in general.
 
 See my [GitHub](https://github.com/tulser) for public repositories or my listed [projects](/projects) on this site for past or present projects of mine.
 
 **I'm open to work.** If interested in potentially hiring me for a software development or IT role (or otherwise related work), you can message me at my professional email address, [`self@wcyates.xyz`](mailto:self@wcyates.xyz).
 
----
+<hr style={{width: "100%"}} />
+
+<div className={classes([style.img_ctr, style.img_ctr_fr, "min-w-[100px] max-w-[450px] w-[30%]"])}>
+    <Image
+        src={lotus}
+        fill={false}
+        alt="Picture of lotuses"
+        style={{objectFit:"contain"}}
+    />
+</div>
+
 ## Interests
 
-I'm particularly enjoy working with Debian based systems. I have aspirations to get involved in the processes of the Debian project, namely packaging, after having created a few source packages of my own.
+I particularly enjoy working with Debian based systems. I have aspirations to get involved in the processes of the Debian project, namely packaging, after having created a few source packages of my own.
 
 I'm particularly interested in multimedia transcoding and many things related to arts and graphics.
 For the aforementioned interests, I currently have a suitable custom built desktop running a kind of Debian Unstable which I use on a daily basis for games, transcoding, artwork, and other projects such as fiction writing and the like. Additionally, for my experimentation, I occasionally use and test NixOS and OpenSUSE [Tumbleweed], and I sometimes use Cachy-OS on my laptop.
@@ -28,7 +56,7 @@ Stemming in part from my anthropological intrigues, I enjoy writing and worldbui
 
 If you come to know me personally, you can feel free to ask about my ventures and works. I personally use the free and open source Krita and LibreOffice for their respective domains; however, seeing some inadequacies, I have been looking at alternatives or perhaps developing my own suite where possible.
 
----
+<hr/>
 
 Additionally, I presently have been volunteering and working at local organizations throughout my life and recently.
 
