@@ -6,7 +6,7 @@
         linear-gradient(to top, var(--main-background-color-dark) 0px, rgb(0,0,0,0) 250px),
         var(--main-background-color-primary);
 
-    p, h1, h2, h3, h4, h5, h6 {
+    p, li, h1, h2, h3, h4, h5, h6 {
         color: #fff;
     }
 
@@ -44,6 +44,12 @@
     }
     h1, h2 {
         margin-bottom: 0.5rem;
+    }
+    li::before {
+        content: "• ";
+    }
+    ul {
+        margin-bottom: 1rem;
     }
 }
 
