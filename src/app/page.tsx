@@ -11,8 +11,8 @@ import { LinkButton, BioLinkInfo } from "@/components/partials";
 
 import Bio from "./bio.mdx";
 
-import portrait from "public/static/images/portrait.webp";
-import lotus from "public/static/images/lotus.webp";
+import portrait from "public/static/images/portrait.jxl";
+import portrait_webp from "public/static/images/portrait.webp";
 
 
 function BioLinkBoard(args: BioLinkInfo[]): ReactNode {
@@ -34,16 +34,20 @@ export default function Page() {
             <article className={classes([style.main_content, cstyle.main_content, cstyle.led_font])}>
                 <section id="profile" className={style.sec_profile}>
                     <div className={classes([style.profile_ctr, "flex flex-col"])}>
-                        <div className={style.portrait}>
-                            <Image
-                                src={portrait}
-                                fill={true}
-                                alt="Head of W. Connor Yates"
-                                preload={true}
-                                sizes="(max-width: 768px) 100vw"
-                            />
+                        <div className={classes([style.portrait, "rounded-md overflow-hidden"])}>
+                            <picture>
+                                <source srcSet={portrait} type="image/jxl" />
+                                <Image
+                                    src={portrait_webp}
+                                    fill={false}
+                                    alt="Face portrait photo of W. Connor Yates"
+                                    preload={true}
+                                    width={512}
+                                    height={512}
+                                />
+                            </picture>
                         </div>
-                        <div className={style.portrait_below}>
+                        <div className={classes([style.portrait_below, "pl-[1rem] pr-[1rem]"])}>
                             <span className="w-full text-center block">
                                 <a href={`mailto:${info.bio_email}`} target="_blank">{ info.bio_email }</a>    
                             </span>

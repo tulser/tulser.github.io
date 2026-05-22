@@ -1,5 +1,4 @@
 import { join, dirname } from "path";
-
 import createMDX from '@next/mdx';
 
 const __dirname = dirname(import.meta.filename);
@@ -11,7 +10,12 @@ const nextConfig = {
     typedRoutes: true,
     turbopack: {
         resolveAlias: {
-            "next-mdx-import-source-file": "./mdx-components.ts",
+            'next-mdx-import-source-file': './mdx-components.ts',
+        },
+        rules: {
+            '*.jxl': {
+                type: 'asset',
+            },
         },
     },
     sassOptions: {

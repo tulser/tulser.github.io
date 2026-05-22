@@ -3,17 +3,24 @@ import style from "./page.module.scss";
 import Image from "next/image";
 import { classes } from "@/helpers";
 
-import mandelbulb from "public/static/images/mandelbulb.webp";
-import lotus from "public/static/images/lotus.webp";
+import mandelbulb from "public/static/images/mandelbulb.jxl";
+import mandelbulb_webp from "public/static/images/mandelbulb.webp";
+import lotus from "public/static/images/lotus.jxl";
+import lotus_webp from "public/static/images/lotus.webp";
 
 
-<div className={classes([style.img_ctr, style.img_ctr_fl, "min-w-[100px] max-w-[300px] w-[20%]"])}>
-    <Image
-        src={mandelbulb}
-        fill={false}
-        alt="Picture of a unique mandelbulb configuration"
-        style={{objectFit:"contain"}}
-    />
+<div className={classes([style.img_ctr, style.img_ctr_fl, "min-w-[100px] max-w-[300px] w-[20%] rounded-md overflow-hidden"])}>
+	<picture>
+		<source srcSet={mandelbulb} type="image/jxl" />
+		<Image
+			src={mandelbulb_webp}
+			fill={false}
+			alt="Picture of a unique mandelbulb configuration"
+			style={{objectFit:"contain"}}
+			width={512}
+			height={512}
+		/>
+	</picture>
 </div>
 
 I'm an aspiring software and IT engineer with additional passions for media & graphics, real-time systems, and other fields which supplement my hobbies. I'm also very fond of Linux, particularly Debian-based systems, of which I use greatly. Within the domain of Linux, I also enjoy contributing to desktop applications and the desktop experience in general.
@@ -24,13 +31,19 @@ See my [GitHub](https://github.com/tulser) for public repositories or my listed 
 
 <hr style={{width: "100%"}} />
 
-<div className={classes([style.img_ctr, style.img_ctr_fr, "min-w-[100px] max-w-[450px] w-[30%]"])}>
-    <Image
-        src={lotus}
-        fill={false}
-        alt="Picture of lotuses"
-        style={{objectFit:"contain"}}
-    />
+<div className={classes([style.img_ctr, style.img_ctr_fr, "min-w-[100px] max-w-[450px] w-[30%] rounded-md overflow-hidden"])}>
+	<picture>
+		<source srcSet={lotus} type="image/jxl" />
+		<Image
+			src={lotus_webp}
+			fill={false}
+			alt="Picture of lotuses"
+			style={{objectFit:"contain"}}
+			width={512}
+			height={512}
+		/>
+		<source srcSet={lotus_webp} type="image/webp" />
+	</picture>
 </div>
 
 ## Interests & Skills
