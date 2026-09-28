@@ -14,7 +14,7 @@
             aspect-ratio: 1;
             min-width: 3rem;
             overflow: hidden;
-            border: 0.15rem solid var(--common-border-color);
+            box-shadow: var(--common-widget-box-shadow);
         }
 
         .portrait_below {
@@ -51,7 +51,4 @@
     margin-bottom: 1rem;
     position: relative;
     height: auto;
-
-    background: hsl(0deg 0% 23%);
-    border: 0.15rem solid var(--common-border-color);
 }

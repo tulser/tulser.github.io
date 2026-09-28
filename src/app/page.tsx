@@ -31,7 +31,7 @@ function BioLinkBoard(args: BioLinkInfo[]): ReactNode {
 export default function Page() {
     return (
         <StandardLayout>
-            <article className={classes([style.main_content, cstyle.main_content, cstyle.led_font])}>
+            <article className={classes([cstyle.main_content, style.main_content])}>
                 <section id="profile" className={style.sec_profile}>
                     <div className={classes([style.profile_ctr, "flex flex-col"])}>
                         <div className={classes([style.portrait, "rounded-md overflow-hidden"])}>

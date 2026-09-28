@@ -22,7 +22,9 @@
 
     --link-color: rgb(96, 187, 96);
 
-    --ctr-background-color: rgb(47, 43, 38, 1);
+    --ctr-background-color: oklch(0.2864 0.0082 79.58);
+
+    --common-widget-box-shadow: 0 0.1rem 0.2rem oklch(0 0 0 / 0.5);
 }
 
 @media (prefers-color-scheme: dark) {

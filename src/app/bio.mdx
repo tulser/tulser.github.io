@@ -1,3 +1,4 @@
+import cstyle from "@/styles/common.module.scss";
 import style from "./page.module.scss";
 
 import Image from "next/image";
@@ -9,7 +10,7 @@ import lotus from "public/static/images/lotus.jxl";
 import lotus_webp from "public/static/images/lotus.webp";
 
 
-<div className={classes([style.img_ctr, style.img_ctr_fl, "min-w-[100px] max-w-[300px] w-[20%] rounded-md overflow-hidden"])}>
+<div className={classes([cstyle.ctr_common, style.img_ctr, style.img_ctr_fl, "min-w-[100px] max-w-[300px] w-[20%] rounded-md overflow-hidden"])}>
 	<picture>
 		<source srcSet={mandelbulb} type="image/jxl" />
 		<Image
@@ -23,7 +24,7 @@ import lotus_webp from "public/static/images/lotus.webp";
 	</picture>
 </div>
 
-I'm an aspiring software and IT engineer with additional passions for media & graphics, real-time systems, and other fields which supplement my hobbies. I'm also very fond of Linux, particularly Debian-based systems, of which I use greatly. Within the domain of Linux, I also enjoy contributing to desktop applications and the desktop experience in general.
+I'm an aspiring software and IT engineer with additional passions for media & graphics, real-time systems, and other fields which supplement my hobbies. I'm also very fond of Linux, historically Debian-based systems. Within the domain of Linux, I also enjoy contributing to desktop applications and the desktop experience in general.
 
 See my [GitHub](https://github.com/tulser) for public repositories or my listed [projects](/projects) on this site for past or present projects of mine.
 
@@ -31,7 +32,7 @@ See my [GitHub](https://github.com/tulser) for public repositories or my listed 
 
 <hr style={{width: "100%"}} />
 
-<div className={classes([style.img_ctr, style.img_ctr_fr, "min-w-[100px] max-w-[450px] w-[30%] rounded-md overflow-hidden"])}>
+<div className={classes([cstyle.ctr_common, style.img_ctr, style.img_ctr_fr, "min-w-[100px] max-w-[450px] w-[30%] rounded-md overflow-hidden"])}>
 	<picture>
 		<source srcSet={lotus} type="image/jxl" />
 		<Image
@@ -48,35 +49,34 @@ See my [GitHub](https://github.com/tulser) for public repositories or my listed 
 
 ## Interests & Skills
 
-I particularly enjoy working with Debian based systems. I have aspirations to get involved in the processes of the Debian project, namely packaging, after having created a few source packages of my own.
+I'm particularly interested in multimedia transcoding and many things related to arts and graphics as part of my hobbies. This also includes a small passion for game development and modding.
 
-I'm particularly interested in multimedia transcoding and many things related to arts and graphics as part of my hobbies. For the aforementioned interests, I currently have a suitable self-built desktop running a kind of Debian Unstable which I use on a daily basis for games, transcoding, artwork, and other projects such as fiction writing and the like. Additionally, for my experimentation, I occasionally use and test NixOS and OpenSUSE [Tumbleweed], and I sometimes use Cachy-OS on my laptop.
+For the aforementioned interests, I currently have a suitable self-built desktop running Debian Linux for my use on a daily basis for games, transcoding, artwork, and other projects such as fiction writing and the like. Additionally, I occasionally use OpenSUSE [Tumbleweed], and have been lightly picking up NixOS.
 
-I'm most proficient in Python, C and other C-like languages - namely C++, Zig, and Rust, and POSIX Shell while having some experience in Javascript, Typescript, and CSS (This site is evidence of that; [it's source is available](https://github.com/tulser/tulser.github.io)).
+I'm most proficient in Python, C and other C-like languages - namely Zig, C++, and Rust - as well as POSIX Shell. Since I made this website, I also have some proficiency in Javascript, Typescript, and CSS ([See the source here](https://github.com/tulser/tulser.github.io)).
 
-For other proficiencies:
+For other skills:
 
-* I'm capable of utilizing Docker/Podman for container deployment and containerized software package builds.
-* I have used FFMPEG to do extensive transcoding for video archival and recording. To some extent, I have also used spandrel/chaiNNer to do video upscaling in tandem.
+* I've used Docker/Podman for container deployment and containerized software package builds.
+* I've used FFMPEG to do extensive transcoding for video archival and recording, especially with SVT-AV1.
+* To some extent, I have also used spandrel/chaiNNer to do explore video upscaling in tandem.
 
-My perceived best trait is that I like to keep systems (e.g. codebases, documentation, etc.) consistently organized and parseable, almost to a compulsive degree. As such, I continually look at projects I work on and wonder, "What can I do to both improve and future proof my work?". As such, when developing software, I believe improving the developer experience (e.g. readability, code deduplication) and ensuring accurate documentation and annotation goes a long way toward making everyone's lives easier.
+My perceived best trait is that I like to keep systems (e.g. codebases, documentation, etc.) consistently organized and parseable, almost to a compulsive degree, particularly with the goal of avoiding the disharmonious pitfalls and footguns of "hackish" and disordered code. As such, I continually look at projects I work on and wonder, "What can I do to both improve and future proof my work?". As such, when developing software, I believe improving the developer experience (e.g. readability, code deduplication) and ensuring accurate documentation and annotation goes a long way toward making everyone's lives easier.
 
-### Hobbies
+### Hobbies & Interests
 
-Elaborating on the briefly stated hobbies:
+Elaborating on my list of affinities:
 
-I enjoy the visual arts, including creating graphics and artworks in my spare time. Currently, I publish my artworks on the public internet under pseudonymous accounts and to family sometimes.
+I enjoy the visual arts, including creating graphics and artworks in my spare time. I sometimes publish these on the public internet, but under private pseudonyms.
 
-I'm also very generally interested in anthropology, namely focusing on presently applicable axioms of humanity as well as speculating as to what future technologies may emerge and how civilization(s) may evolve from those technologies or certain events. Additionally, I'm particularly interested in generalizing anthropology beyond Human study to a broader [theoretical] study of sapient life and civilizations.
+Every other day, I am generally interested in anthropology and human philosophy as I seek to find axioms of humanity, to speculate how future technologies may emerge and develop/progress as movements, and how civilization(s) may evolve from those technologies or certain events. Additionally, I'm particularly interested in generalizing beyond Human study to broad thought experiments and theory of potential sapient life and civilizations.
 
-In my down time, I enjoy writing and fictional worldbuilding that integrates the products of my anthropological intrigues. I also produce artwork and illustrations to support. I haven't yet published my writing except for private drafts. The subject of my writing often is connected with my publications of artworks, so it's of course discussed in private or pseudonymously.
+In my down time, I enjoy writing and fictional worldbuilding that integrates the products of my intrigues, with illustrations and concepts - to include that my publications of artworks - produced in tandem.
 
-If you come to know me personally, you can feel free to ask about my ventures and works. I personally use the free and open source Krita, LibreOffice, and Zim for their respective domains; however, for that set of software, I have been looking at contributing improvements, finding alternatives, or perhaps developing my own suite where possible.
+If you come to know me personally, you can feel free to ask about these interests and works.
 
 <hr/>
 
 In other work, I presently have been volunteering and working at local organizations throughout my life and recently.
-
-For a while, I have been volunteering at a local animal shelter, handling dogs of all kinds for a few hours each week while working on my own personal projects and ventures.
 
 I also do volunteer video production for a local organization and have done video production for events and conferences.

@@ -22,6 +22,7 @@
 
 .main_content {
     background: hsl(from var(--main-background-color-primary) h s calc(l - 2) / 0.5);
+    box-shadow: 0 0.1rem 0.8rem oklch(0 0 0 / 0.3);
     width: var(--main-content-nom-width);
     max-width: var(--main-content-max-width);
     margin: 0 auto;
@@ -57,6 +58,6 @@
 }
 
 .ctr_common {
-    background-color: var(--ctr-background-color);
-    border: solid 0.2rem var(--common-border-color);
+    background: var(--ctr-background-color);
+    box-shadow: var(--common-widget-box-shadow);
 }

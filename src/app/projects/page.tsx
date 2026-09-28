@@ -24,7 +24,7 @@ function ProjectInfoBoxCtr(args: ProjectInfo[]): ReactNode {
         let row_maxitems = 2;
         let boxrow = args.slice(boxrow_key_iter, boxrow_key_iter + row_maxitems).map((entry, ix) => {
             const ret = (
-                <div key={boxrow_key_iter} className={classes([cstyle.ctr_common, "grow px-8 py-5"])}>
+                <div key={boxrow_key_iter} className={classes([cstyle.ctr_common, "grow px-8 py-5 rounded-md"])}>
                     <h2 className="mb-1 text-lg"><a href={entry.target_url}>{entry.title}</a></h2>
                     <p className="mb-4 font-bold italic">{entry.short_description}</p>
                     <div className={classes([cstyle.markdown_base])}>
@@ -49,7 +49,7 @@ function ProjectInfoBoxCtr(args: ProjectInfo[]): ReactNode {
 export default function Page() {
     return (
         <StandardLayout>
-            <article className={classes([style.main_content, cstyle.main_content, cstyle.led_font])}>
+            <article className={classes([cstyle.main_content, style.main_content])}>
                 <section id="projects" className={style.sec_projects}>
                     <div className={classes([style.projects_title, "pt-8 pb-8 mb-10 text-center"])}>
                         <h1 className="text-4xl">Original Projects</h1>
