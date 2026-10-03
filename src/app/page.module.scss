@@ -14,7 +14,17 @@
             aspect-ratio: 1;
             min-width: 3rem;
             overflow: hidden;
+        }
+
+        .portrait::before {
+            content: "";
+            position: absolute;
+            pointer-events: none;
             box-shadow: var(--common-widget-box-shadow);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         .portrait_below {
@@ -51,4 +61,15 @@
     margin-bottom: 1rem;
     position: relative;
     height: auto;
+}
+
+.img_ctr::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    box-shadow: var(--common-widget-box-shadow);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
